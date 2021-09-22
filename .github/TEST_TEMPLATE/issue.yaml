@@ -1,0 +1,51 @@
+name: Bug Report
+description: File a bug report
+title: "[Bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: textarea
+    id: describe
+    attributes:
+      label: Describe the bug
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce the behavior
+      placeholder: |
+        1. In this environment...
+        2. With this config...
+        3. Run '...'
+        4. See error...
+    validations:
+      required: false
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: What is the expected behavior?
+    validations:
+      required: true
+  - type: dropdown
+    id: version
+    attributes:
+      label: Version
+      description: What version of our operator are you using?
+      options:
+        - .0.2.x (Ansible)
+        - .0.3.x (Golang)
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Please copy/paste the following logs:
+      placeholder: |
+        1. Velero pod logs
+        2. Restic pod logs (if applicable)
+        3. Operator pod logs
+      render: shell
