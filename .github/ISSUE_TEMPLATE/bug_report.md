@@ -21,6 +21,7 @@ Steps to reproduce the behavior:
 A clear and concise description of what you expected to happen.
 
 **Provide the following logs**
+`oc logs <POD_NAME>`
 1. Velero pod logs
 2. Restic pod logs (if applicable)
 3. Operator pod logs
